@@ -9,7 +9,7 @@
     stages {
         
         
-        stage('tests') {
+        stage('tests12') {
             steps {
                 sh "mvn test"
             }
