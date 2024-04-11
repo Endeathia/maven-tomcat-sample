@@ -1,5 +1,5 @@
  pipeline {     
-    agent {label 'slave-1'} 
+    agent {label 'Production'} 
     
     tools {
         jdk 'jdk17'
@@ -8,12 +8,6 @@
 
     stages {
         
-         
-        stage('Compile') {
-            steps {
-            sh  "mvn compile"
-            }
-        }
         
         stage('tests') {
             steps {
@@ -21,10 +15,6 @@
             }
         }
         
-        stage('Build') {
-            steps {
-                sh "mvn package"
-            }
-        }
+
     }
 }
